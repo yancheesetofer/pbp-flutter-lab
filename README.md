@@ -1,16 +1,41 @@
-# counter_7
+# Assignment 7 PBP
+### Yan Christofer S.
+### 2106752464
+### PBP C 
 
-A new Flutter project.
+## Stateless Widget dan Stateful Widget, serta Perbedaan dari Keduanya
+**_Stateless Widget_**, dan **_Stateful Widget_**.
+1. **_Stateless Widget_** adalah sebuah _widget_ yang state-nya tidak bisa diubah-ubah gugat setelah dibangun. widget ini immutable ketika mereka dibangun dalam kata lain perubahan apapun pada variabel, icon, tombol, atau pengambilan data tidak akan mengubah state app-nya. Contoh sederhananya adalah `Text`.
+2. **_Stateful Widget_** adalah sebuah _widget_ yang state-nya bisa diubah setelah dibangun. State dari _widget_ ini mutable dan bisa diubah berkali-kali. Contoh sederhananya adalah `Form`. <br />
 
-## Getting Started
+Perbedaan
+**_Stateless Widget_**
+1. Static
+2. Hal ini tidak bergantung pada perubahan data atau perubahan _behavior_ apapun
+3. Tidak memiliki state, akan di _render_ sekali dan tidak akan di-_update_ sendiri, tetapi hanya akan diperbarui saat data eksternalnya berubah <br />
+Contohnya: `Text`. 
 
-This project is a starting point for a Flutter application.
+**_Stateful Widget_**
+1. Dynamic
+2. Dilakukan _update_ selama _runtime_ berdasarkan _action_ atau perubahan data yang dilakukan oleh _user_
+3. Memiliki _internal state_ dan dapat dilakukan _re-render_ jika input data nya berubah atau saat _state_ dari _widget_ berubah <br />
+Contohnya: `Form` 
 
-A few resources to get you started if this is your first Flutter project:
+## Widget Apa Saja yang Dipakai pada Proyek Kali Ini Beserta Fungsinya
+AppBar: Membuat toolbar.
+Text: menampilkan text.
+Center: membuat child menjadi centered
+Column: Layout child vertikal.
+Row: Layout child horizontal.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Fungsi dari `setState()` dan Variabel yang Terdampak
+Fungsi `setState()` akan mengubah data dan menampilkannya per state
+## Perbedaan antara `const` dengan `final`
+const untuk variable yang konstan sejak saat compile time, sedangkan final untuk variable dengan value yang tidak dapat diubah sama sekali
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Cara Implementasi yang Dilakukan
+### Membuat app Flutter bernama counter_7
+Tentunya, harus diawali dahulu dengan melakukan `flutter create counter_7` pada bash folder yang dituju untuk memulai proyek ini.
+### Membuat fungsi untuk button decrement
+### Membuat fungsi menentukan jenis bilangan ganjil dan genap
+### Melakukan fungsi display untuk widget
