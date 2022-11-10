@@ -29,11 +29,11 @@ Column: Layout child vertikal.
 Row: Layout child horizontal.
 
 ## Fungsi dari `setState()` dan Variabel yang Terdampak
-Fungsi `setState()` akan mengubah data dan menampilkannya per state
+Fungsi `setState()` adalah mengubah data dan menampilkannya per state (widget dan turunannya direbuild)
 ## Perbedaan antara `const` dengan `final`
 const untuk variable yang konstan sejak saat compile time, sedangkan final untuk variable dengan value yang tidak dapat diubah sama sekali
 
-## Cara Implementasi yang Dilakukan
+## Implementasi
 ### Membuat app Flutter bernama counter_7
 Tentunya, harus diawali dahulu dengan melakukan `flutter create counter_7` pada bash folder yang dituju untuk memulai proyek ini.
 ### Membuat fungsi untuk button decrement
