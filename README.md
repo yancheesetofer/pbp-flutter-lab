@@ -42,6 +42,8 @@ Tentunya, harus diawali dahulu dengan melakukan `flutter create counter_7` pada 
 
 # Assignment 8 PBP
 
+`flutter run --no-sound-null-safety` to run the app due to intl package
+
 ## Perbedaan **Navigator.push** dan **Navigator.pushReplacemenet**
 _Navigator.push_ akan menavigasi app dengan menambahkan rute ke stack
 _Navigator.pushReplacement_ akan menavigasi app dengan menggantikan rute yang ada pada top stack
