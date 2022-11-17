@@ -1,17 +1,42 @@
 import 'package:flutter/material.dart';
+import 'drawer.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class Budget {
+  final String judul;
+  final int nominal;
+  final String tanggal;
+  final String jenisBudget;
+  Budget(this.judul, this.nominal, this.jenisBudget, this.tanggal);
+}
+
+
+class MyApp extends StatefulWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
 
   // This widget is the root of your application.
+
+  final List<Budget> data = <Budget>[];
+
+  void addData(Budget budget) {
+    setState(() {
+      data.add(budget);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Program Counter',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -24,13 +49,17 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(
+        title: 'Program Counter',
+        data: data,
+        addData: addData,
+      ),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+  const MyHomePage({super.key, required this.title, required this.data, required this.addData});
 
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
@@ -40,8 +69,9 @@ class MyHomePage extends StatefulWidget {
   // case the title) provided by the parent (in this case the App widget) and
   // used by the build method of the State. Fields in a Widget subclass are
   // always marked "final".
-
+  final Function(Budget) addData;
   final String title;
+  final List<Budget> data;
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -91,6 +121,13 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
+
+      //add drawer
+      drawer: PublicDrawer(
+        data: widget.data,
+        addData: widget.addData,
+      ),
+
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.

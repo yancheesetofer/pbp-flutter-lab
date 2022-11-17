@@ -39,3 +39,41 @@ Tentunya, harus diawali dahulu dengan melakukan `flutter create counter_7` pada 
 ### Membuat fungsi untuk button decrement
 ### Membuat fungsi menentukan jenis bilangan ganjil dan genap
 ### Melakukan fungsi display untuk widget
+
+# Assignment 8 PBP
+
+## Perbedaan **Navigator.push** dan **Navigator.pushReplacemenet**
+_Navigator.push_ akan menavigasi app dengan menambahkan rute ke stack
+_Navigator.pushReplacement_ akan menavigasi app dengan menggantikan rute yang ada pada top stack
+
+## Widget yang digunakan
+
+Drawer untuk navigasi antar page
+ListView menampilkan children dengan scroll
+SizedBox membuat box dengan specified size
+ShowDatePicker untuk date picker dialog
+Form untuk membuat container form field
+
+## Jenis-jenis event pada flutter
+
+onTap dan onPressed mengcapture event ketika tombol ditekan (onTap untuk tiap gesture)
+
+onChange ketika ada value yang dirubah
+
+onHover ketika mouse pointer bergerak di atas tombol
+
+onSave mengcapture event ketika terjadi event "save"
+
+## Cara kerja Navigator dalam mengganti halaman dari aplikasi flutter
+
+Navigation di flutter menerapkan stack.
+Seperti yang dijelaskan pada poin sebelumnya, 
+push akan menambahkan screen baru ke top of stack (halaman sekarang) dan pop akan membuat user menavigasi ke halaman sebelumnya (remove current screen)
+
+## Implementasi checklists
+
+### Buat drawer untuk navigasi
+### Navigator.pushReplacement untuk 3 menu yang ada
+### Buat halaman form, khusus pemasukan dan pengeluaran kita buat dropdown
+### Data.dart dibuat untuk menyimpan data budget yang sudah dibuat
+### Konfigurasi keempat file .dart agar saling sinkron
