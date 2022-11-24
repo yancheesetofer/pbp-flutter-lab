@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:counter_7/main.dart';
 import 'package:counter_7/form.dart';
 import 'package:counter_7/data.dart';
+import 'mywatchlistpage.dart';
 
 
 class PublicDrawer extends StatefulWidget {
@@ -67,6 +68,20 @@ class _PublicDrawerState extends State<PublicDrawer> {
                 );
               },
             ),
+            ListTile(
+              title: const Text('My Watch List'),
+              onTap: () {
+                // Route menu ke halaman form
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => MyWatchlistPage(
+                            data: widget.data,
+                            addData: widget.addData,
+              )),
+    );
+  },
+),
           ],
         ),
       ),

@@ -79,3 +79,19 @@ push akan menambahkan screen baru ke top of stack (halaman sekarang) dan pop aka
 ### Buat halaman form, khusus pemasukan dan pengeluaran kita buat dropdown
 ### Data.dart dibuat untuk menyimpan data budget yang sudah dibuat
 ### Konfigurasi keempat file .dart agar saling sinkron
+
+# Assignment 8 PBP
+`flutter run --no-sound-null-safety` to run the app due to intl package
+
+##  Menambahkan tombol navigasi pada drawer/hamburger untuk ke halaman mywatchlist.
+### Tambah drawer navigasi ke halaman baru yaitu mywatchlistpage
+
+## Membuat satu file dart yang berisi model mywatchlist.
+### Convert data json dari https://tugasmvt.herokuapp.com/mywatchlist/json/ ke dart menggunakan quicktype
+### simpan ke file myWatchlist.dart
+
+## Menambahkan halaman mywatchlist yang berisi semua watch list yang ada pada endpoint JSON di Django yang telah kamu deploy ke Heroku sebelumnya (Tugas 3). Pada bagian ini, kamu cukup menampilkan judul dari setiap mywatchlist yang ada.
+### Buat navigasi dari judul ke halaman detail
+### class Movie sebagai halaman detail
+### Buat rute navigasi untuk kembali ke mywatchlistpage
+
